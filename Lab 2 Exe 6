@@ -1,0 +1,28 @@
+// Lab 2
+
+// Exercise 6: The else-if statement (10 points)
+
+// Write a C++ program that prompts the user for a temperature value.
+// The program should print "cool" when the temperature is greater than 40 and less than or equal to 60, 
+// should print "warm" when the temperature is greater than 60 and less than or equal to 85 
+// and should print "don't go outside" for all other temperature values.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Enter temperature: ";
+	int temp;
+	cin >> temp;
+	if (temp > 40  && temp <= 60) {
+		cout << "cool" << endl;
+	}
+	else if (temp > 60 && temp <= 85) {
+		cout << "warm" << endl;
+	}
+	 else {
+		cout << "don't go outside" << endl;
+	}
+	return 0;
+}
