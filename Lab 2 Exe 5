@@ -1,8 +1,8 @@
-//Lab 2
+// Lab 2
 
-//Exercise 5: if-else statement with the AND operator (10 points)
+// Exercise 5: if-else statement with the AND operator (10 points)
 
-//Provide a solution to the previous exercise using the and operator (&&).
+// Provide a solution to the previous exercise using the and operator (&&).
 
 #include <iostream>
 
