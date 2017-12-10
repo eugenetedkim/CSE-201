@@ -12,14 +12,14 @@
 using namespace std;
 
 int main() {
-	cout << "Enter an integer: ";
-	int x;
-	cin >> x;
-	if (x % 2 == 0) {
-		cout << "even number" <<endl;
-	}
-	else {
-		cout << "odd number" <<endl;
-	}
-	return 0;
+  cout << "Enter an integer: ";
+  int x;
+  cin >> x;
+  if (x % 2 == 0) {
+    cout << "even number" <<endl;
+  }
+  else {
+    cout << "odd number" <<endl;
+  }
+  return 0;
 }
