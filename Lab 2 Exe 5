@@ -9,14 +9,14 @@
 using namespace std;
 
 int main() {
-	cout << "Enter temperature: ";
-	int temp;
-	cin >> temp;
-	if (temp >= 70 && temp <= 85) {
-		cout << "good weather" << endl;
-	}
-	else {
-		cout << "bad weather" << endl;
-	}
-	return 0;
+  cout << "Enter temperature: ";
+  int temp;
+  cin >> temp;
+  if (temp >= 70 && temp <= 85) {
+    cout << "good weather" << endl;
+  }
+  else {
+    cout << "bad weather" << endl;
+  }
+  return 0;
 }
