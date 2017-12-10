@@ -12,17 +12,17 @@
 using namespace std;
 
 int main() {
-	cout << "Enter temperature: ";
-	int temp;
-	cin >> temp;
-	if (temp > 40  && temp <= 60) {
-		cout << "cool" << endl;
-	}
-	else if (temp > 60 && temp <= 85) {
-		cout << "warm" << endl;
-	}
-	 else {
-		cout << "don't go outside" << endl;
-	}
-	return 0;
+  cout << "Enter temperature: ";
+  int temp;
+  cin >> temp;
+  if (temp > 40  && temp <= 60) {
+    cout << "cool" << endl;
+  }
+  else if (temp > 60 && temp <= 85) {
+    cout << "warm" << endl;
+  }
+  else {
+    cout << "don't go outside" << endl;
+  }
+  return 0;
 }
