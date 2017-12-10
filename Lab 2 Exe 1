@@ -18,7 +18,8 @@ On your local machine, under your home directory, create a folder named Academic
 
 Under the Academics folder, create three subfolders named Fall2017, Winter2018 and Spring2018.
 
-Under the Fall2017 folder, create subfolders for each of the classes you are taking. For example, you would create a subfolder under Fall2017 named CSE201.
+Under the Fall2017 folder, create subfolders for each of the classes you are taking.
+For example, you would create a subfolder under Fall2017 named CSE201.
 
 Under the CSE201 folder, create subfolders named Lecture and Lab.
 
