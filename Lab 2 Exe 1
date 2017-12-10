@@ -1,0 +1,28 @@
+Lab 2
+David Turner edited this page on Aug 16 · 19 revisions
+
+Learning Objectives of this Assignment
+
+Continue learning how to work from the Linux command line.
+Learn how to write programs to solve simple problems.
+Learn the bool data type.
+Learn about comparison operators (==, <=, !=, etc.) and boolean operators (and, or, not).
+
+Exercise 1: Working with Folders/Directories (10 points)
+
+Create the following directories using the command line. Do not create these folders using a file system browser.
+
+Step 1:
+
+On your local machine, under your home directory, create a folder named Academics.
+
+Under the Academics folder, create three subfolders named Fall2017, Winter2018 and Spring2018.
+
+Under the Fall2017 folder, create subfolders for each of the classes you are taking. For example, you would create a subfolder under Fall2017 named CSE201.
+
+Under the CSE201 folder, create subfolders named Lecture and Lab.
+
+Step 2:
+
+Create the same folder hierarchy in the Google Drive that comes with your Coyote email ID.
+
