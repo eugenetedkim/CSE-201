@@ -1,0 +1,22 @@
+//Lab 2
+
+//Exercise 5: if-else statement with the AND operator (10 points)
+
+//Provide a solution to the previous exercise using the and operator (&&).
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Enter temperature: ";
+	int temp;
+	cin >> temp;
+	if (temp >= 70 && temp <= 85) {
+		cout << "good weather" << endl;
+	}
+	else {
+		cout << "bad weather" << endl;
+	}
+	return 0;
+}
