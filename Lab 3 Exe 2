@@ -1,0 +1,26 @@
+// Lab 3
+
+// Exercise 2: Complex boolean expressions (10 points)
+
+// Write a program that prompts the user to enter an integer.
+// The program then prints "good number" if the number is even and greater than 100 or is odd and less than 50.
+// Otherwise it prints "bad number". Solve the problem with a single if-else statement.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  cout << "Enter an integer: ";
+	int x;
+	cin >> x;
+	if (x % 2 == 0 && x > 100 || x % 2 != 0 && x < 50) {
+    cout << "good number" <<endl;
+    }
+  else {
+    cout << "bad number" <<endl;
+  }
+  return 0;
+}
+
+
