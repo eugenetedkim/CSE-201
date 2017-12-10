@@ -1,0 +1,25 @@
+//Lab 2
+
+//Exercise 4: if-else statement with the OR operator (10 points)
+
+//Write a C++ program that prompts the user for a temperature.
+//If the user enters a number between 70 and 85, then print "good weather" else print "bad weather".
+//Use the or operator (||) to solve this problem.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Enter temperature: ";
+	int temp;
+	cin >> temp;
+
+	if ( temp <= 69 || temp >= 86 ) {
+		cout << "bad  weather" << endl;
+	}
+	else {
+		cout << "good  weather" << endl;
+	}
+	return 0;
+}

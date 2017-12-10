@@ -1,0 +1,21 @@
+//Lab 3
+
+//Exercise 3: The if statement (10 points)
+
+//Write a C++ program that prompts the user to enter a temperature.
+//If the user enters a number greater than 85, then the program should print "Turn the AC on."
+
+#include <iostream>
+
+using namespace std;
+
+int main () {
+	cout << "Enter a temperature: ";
+	int temp;
+	cin >> temp;
+
+	if (temp > 85) {
+		cout << "Turn the AC on." << endl;
+	}
+	return 0;
+}
