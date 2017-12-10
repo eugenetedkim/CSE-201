@@ -1,0 +1,25 @@
+// Lab 3
+
+// Exercise 1: Modulo operator (10 points)
+
+// Write a C++ program that prompts the user for an integer.
+// The program reads the integer and displays "even number" if the number is even or "odd number" if the number is odd.
+
+// Hint: use the modulo operator (%)
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	cout << "Enter an integer: ";
+	int x;
+	cin >> x;
+	if (x % 2 == 0) {
+		cout << "even number" <<endl;
+	}
+	else {
+		cout << "odd number" <<endl;
+	}
+	return 0;
+}
