@@ -1,0 +1,48 @@
+// Exercise 6: Sorting (10 points)
+
+// void mysort(int a[], int len);
+
+// Write a function called mysort that rearranges elements of an array a so that they form an increasing sequence of values.
+// Allow for different array positions to contain the same value.
+
+// Develop your own sorting algorithm; do not use a predefined sort routine from the standard library.
+
+// Implement a simple sorting algorithm rather than an efficient algorithm.
+
+// Write code that thoroughly tests your function.
+
+#include <iostream>
+
+using namespace std;
+
+void mysort(int a[], int len)
+{
+    for (int not_sorted = 0; not_sorted < len - 1; not_sorted++)
+    {
+        int smallest_pos = not_sorted;
+        for (int i = not_sorted + 1; i < len; i++)
+        {
+            if (a[i] < a[smallest_pos])
+            {
+                smallest_pos = i;
+            }
+        }
+        if (smallest_pos != not_sorted)
+        {
+                int temp = a[smallest_pos];
+                a[smallest_pos] = a[not_sorted];
+                a[not_sorted] = temp;
+        }
+    }
+    for (int i = 0; i < len; i++)
+    {
+        cout << a[i] << endl;
+    }
+}
+
+int main()
+{
+    const int SIZE = 5;
+    int a[SIZE] = {11, 9, 17, 5, 12};
+    mysort(a, SIZE);
+}
