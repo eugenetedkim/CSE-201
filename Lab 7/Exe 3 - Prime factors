@@ -1,0 +1,43 @@
+// Exercise 3: Prime factors (10 points)
+
+// Implement a function that takes an integer as its sole argument
+// and returns a vector containing the prime factors of that number.
+
+// For example, if you pass in 100, then function returns the vector (2, 2, 5, 5).
+
+// The function signature should look like the following.
+
+// vector<int> factor(int n)
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+vector<int> factor(int n) {
+    int divisor = 2;
+    vector<int> w;
+    
+    while (n != 1) {
+        if (n % divisor == 0) {
+            w.push_back(divisor);
+            n = n / divisor;
+        }
+        else {
+            divisor++;
+        }
+    }
+    return w;
+}
+
+main() {
+    cout << "Input an integer: ";
+    int num;
+    cin >> num;
+    
+    vector<int> v = factor(num);
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << endl;
+    }
+    cout << endl;
+}
