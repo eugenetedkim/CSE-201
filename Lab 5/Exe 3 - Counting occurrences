@@ -1,0 +1,33 @@
+// Lab 5
+// Exercise 3: Counting occurrences (10 points)
+
+// Implement the function countOccurrences whose declaration appears below.
+
+// The first argument of the function is an array a of integers,
+// the second argument len is the number of elements in the array,
+// and the third argument is an integer k.
+
+// The function returns the number of times k occurs in a.
+
+// int countOccurrences(int a[], int len, int k)
+
+#include <iostream>
+
+using namespace std;
+
+int countOccurences(int a[], int len, int k) {
+	int count = 0;
+	for (int i = 0; i < len ; ++i) {
+		if (a[i] == k) {
+			count = count + 1;
+		}
+	}
+	return count;
+}
+
+int main() {
+	int a[] = {0, 1, 2, 3, 4, 5, 0, 0};
+	cout << countOccurences(a, 8, 0) << endl;
+	return 0;
+}
+
