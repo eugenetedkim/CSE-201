@@ -1,0 +1,23 @@
+// Exercise 2: IsEven function (10 points)
+
+// Write and test a function named isEven that takes an integer argument n and returns a boolean value.
+// Implement the function so that it returns true when n is even and false when n is odd.
+
+// Write a program that calls the isEven function to test it.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    cout << "Enter an integer: ";
+    int x;
+    cin >> x;
+    if (x % 2 == 0 && x > 100 || x % 2 != 0 && x < 50) {
+        cout << "good number" <<endl;
+    }
+    else {
+        cout << "bad number" <<endl;
+    }
+    return 0;
+}
