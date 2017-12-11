@@ -1,0 +1,36 @@
+// Exercise 5: Vector insertion (10 points)
+
+// Suppose a vector v contains a sequence of integers ordered from lowest to highest.
+// For example, v might contain the values 3, 6, 7, 12.
+// Write a function called insert that takes this vector v as a first argument and an integer k as the second argument.
+// The function inserts k into the vector so that it preserves the order of elements.
+// For example, if v were (3, 6, 7, 12) and k were 5, then after calling the function, v would be (3, 5, 6, 7, 12).
+// In your implementation of insert, do not use the insert function of the vector class (v.insert).
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+void insert(vector<int> & v, int k) {
+    v.push_back(k);
+    for (int i = 0; i < v.size() - 1; i++) {
+        for(int i = 0; i < v.size() - 1; i++) {
+            if(v[i] > v[i + 1]) {
+                swap(v[i], v[i + 1]);  
+            }
+        }
+    }
+    for (int i = 0; i < v.size(); i++) {
+        cout << v[i] << endl;
+    }
+}
+
+int main() {
+    vector<int> v;
+    v.push_back(3);
+    v.push_back(6);
+    v.push_back(7);
+    v.push_back(12);
+    insert(v, 5);
+}
