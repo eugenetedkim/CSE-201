@@ -1,0 +1,14 @@
+// Exercise 6: 'For' Loops (10 points)
+
+// Provide a solution to the previous exercise that uses a for loop.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  for (int x = 330; x >= 330 && x <= 550; ++x) {
+    cout << x << endl;
+    }
+    return 0;
+}
