@@ -1,0 +1,38 @@
+//Lab 5
+// Exercise 4: Lucky arrays (10 points)
+
+// Implement a function that determines if an array of int is lucky.
+// The function returns true if the array passed into it contains at least one 7 and no 13's;
+// otherwise it returns false.
+
+// A declaration of the function is shown below.
+
+// bool isLucky(int a[], int len)
+
+#include <iostream>
+
+using namespace std;
+
+bool isLucky(int a[], int len) {
+	bool lucky = false;
+	for (int i = 0; i < len; ++i) {
+		if (a[i] == 7) {
+			lucky = true;
+		}
+		else if (a[i] == 13) {
+			lucky = false;
+		}
+	}
+	return lucky;
+}
+
+int main() {
+	int a[] = {13, 2, 3, 4, 5, 6, 7, 13};
+	bool result = isLucky(a, 8);
+	if (result == 1) {
+		cout << "True" << endl;
+	}
+	else {
+		cout << "False" << endl;
+	}
+}
