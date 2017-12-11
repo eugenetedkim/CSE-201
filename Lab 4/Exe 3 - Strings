@@ -1,0 +1,41 @@
+// Exercise 3: Strings (10 points)
+
+// A person's initials is the first letter of their first name, 
+// followed by a period, followed by the first letter of their last name, 
+// followed by a period.
+// For example, the initials for David Turner are D.T.
+
+// Write a program that prompts the user for a first name and then prompt the user for a last name. 
+// Have the program display the user's initials.
+
+// As part of your solution, define a function named initials, which takes 2 arguments: 
+// the first name and the last name. The function returns the person's initials as a string.
+
+// Because the function arguments don't need to be changed and are complex data types, 
+// you should pass them into the function as const references.
+
+// Hint: use the substr function or the index operator of the string data type.
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+string initials(const string firstName, const string lastName) {
+    string first = firstName.substr(0,1);
+    string last = lastName.substr(0,1);
+    string firstLast = first + "." + last + ".";
+    return firstLast;
+}
+
+int main() {
+    string firstLast;
+    cout << "What is your first name? " << endl;
+    string firstName;
+    cin >> firstName;
+    cout <<"What is your last name? " << endl;
+    string lastName;
+    cin >> lastName;
+    firstLast = initials(firstName, lastName);
+    cout << firstLast << endl;
+}
