@@ -1,0 +1,27 @@
+// Exercise 8: Random integers (10 points)
+
+// Write a program that generates a list of 100 random integers in [0, 100), which means between 0 and 99 inclusive.
+
+// Save the program output by redirecting the standard output stream to a file.
+// To do this, run the program as follows.
+
+// ./a.out > numbers.txt
+
+// Open numbers.txt in a text editor to see the result.
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int randomBetween(int s, int e) {
+  int range = e - s;
+  int n = s + rand() % range;
+  return n;
+}
+
+int main(int argc, char * args[]) {
+  srand(time(0));
+  int n = randomBetween(10, 20);
+  cout << "Random number between 10 and 20: " << n << endl;
+}
