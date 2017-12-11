@@ -1,0 +1,50 @@
+// Lab 6
+// Exercise 1: Debugging exercise (10 points)
+
+// Define a lucky array as one that contains at least one 7.
+// The following function was written to determine whether a given array of int is lucky.
+// However, it has a logic error. Fix the code.
+
+// bool isLucky(int a[], int len) {
+//     for (int i = 0; i < len; ++i) {
+//         if (a[i] == 7) {
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     }
+// }
+
+// int main(int argc, char * args[]) {
+//     int a[] = { 13, 0, -7, 3, 7, 9, 11, 7 }
+//     if (isLucky(a, 7)) {
+//         cout << "Array a is lucky." << endl;
+//     } else {
+//         cout << "Array a is unlucky." << endl;
+//     }
+// }
+
+#include <iostream>
+
+using namespace std;
+
+bool isLucky(int a[], int len) {
+    bool lucky = false;
+    for (int i = 0; i < len; ++i) {
+        if (a[i] == 7) {
+            lucky = true;
+        } else {
+            lucky = false;
+        }
+    }
+    return lucky;
+}
+
+int main(int argc, char * args[]) {
+    int a[] = { 13, 0, -7, 3, 7, 9, 11, 7 };
+    if (isLucky(a, 8)) {
+        cout << "Array a is lucky." << endl;
+    } else {
+        cout << "Array a is unlucky." << endl;
+    }
+}
