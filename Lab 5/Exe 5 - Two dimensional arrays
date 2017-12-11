@@ -1,0 +1,48 @@
+// Lab 5
+// Exercise 5: Two dimensional arrays (10 points)
+
+// Implement a function that counts the number of negative integers
+// in a two-dimensional array with 100 rows and 100 columns.
+
+// The function takes a two-dimensional array of int and returns the number of negative numbers in it.
+
+// A declaration of the function is shown below.
+
+// int countNegatives(int a[100][100]);
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int countNegatives(int a[100][100]) {
+    
+    int count = 0;
+    
+    for (int i = 0; i < 100; i++ ) {
+        for (int j = 0; j < 100; j++) {
+            if (a[i][j] < 0) {
+                count++;
+            }
+        }
+    }
+    
+    return count;
+    
+}
+
+int main() {
+    
+    srand(time(0));
+    int a[100][100];
+    
+    for (int i = 0; i < 100; i++) {
+        for (int j = 0; j < 100; j++) {
+            a[i][j]=(rand()% 200 + (-100));
+            cout << a[i][j] << endl;
+        }
+    }
+    
+    cout << "\nThis 2-Dimensional array contains "<< countNegatives(a) << " negative numbers." <<endl;
+    
+}
