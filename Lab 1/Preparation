@@ -1,0 +1,15 @@
+// Preparation (10 points)
+
+// You will do your assignments using a Cloud9 workspace.
+// Your instructor will use your email to send you an invitation to join the csusb team on Cloud9.
+//The email will have the word support in the subject line. When you receive this email, 
+// follow the link to create a free Cloud9 account. Then do the following.
+
+// Create a new workspace outside of the csusb team with these options:
+// Select the team to "Don't set a team for this workspace."
+// Workspace name: cse201 (other name is OK)
+// Template: Blank
+// Access: Private
+// Open the new workspace you created.
+// Click Share in the top right corner.
+// Under the Invite People box, invite csusbdt with RW access. Ask your TA for their Cloud 9 id and invite them.
