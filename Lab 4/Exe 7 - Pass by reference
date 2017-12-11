@@ -1,0 +1,24 @@
+/*
+Exercise 7: Pass by reference (10 points)
+Implement a function that increases the value of an integer passed into it by 1.
+The function has the following signature.
+void addOne(int & k);
+Write test code with assertions to verify that you implemented the function correctly.
+Unlike the previous exercise, you can not call the addOne function with a constant because the function's argument is a reference.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+void addOne(int & k) {
+    k = k + 1;
+}
+
+int main() {
+    cout << "Please enter an integer: ";
+    int k;
+    cin >> k;
+    addOne(k);
+    cout << "One greater than your integer is: " << k << endl;
+}
