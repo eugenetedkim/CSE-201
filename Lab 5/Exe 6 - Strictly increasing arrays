@@ -1,0 +1,36 @@
+// Lab 5
+// Exercise 6: Strictly increasing arrays (10 points)
+
+// Write a function called isStrictlyIncreasing that checks
+// whether an array of integers contains values that are in strictly increasing order.
+
+// A declaration of the function is shown below.
+
+// The function returns true if the elements are in strictly increasing order;
+// otherwise it returns false.
+
+// For example, it will return true for (-2, 4, 5, 6, 8)
+// and it will return false for (3, 4, 6, 6, 9).
+
+// bool isStrictlyIncreasing(int a[], int len)
+
+#include <iostream>
+
+using namespace std;
+
+bool isStrictlyIncreasing(int a[], int len) {
+    for (int i = 0; i < len - 1; i++) {
+        if (a[i] >= a[i + 1]) {
+            return false;
+        }
+    }
+}
+
+int main() {
+    int a[5] = {1, 4, 5, 6, 7};
+    if (isStrictlyIncreasing(a,5)) {
+        cout << "True; the values in the array are strictly increasing in order." << endl;
+    } else {
+        cout << "False; the values in the array are not strictly increasing in order." << endl;
+    }
+}
