@@ -16,18 +16,18 @@ int main() {
   int n;
   bool flag = false;
   while (flag != true) {
-    cout << "What year did Pakistan achieve independence?"<<endl;
+    cout << "What year did Pakistan achieve independence?" << endl;
     cin >> n;
     if (n < 1947) {
     cout << "too early" << endl;
     }
     else if (n > 1947) {
     cout << "too late" << endl;
-	  }
+    }
     else {
-			cout << "you got it" << endl;
-			flag = true;
-	  }
+    cout << "you got it" << endl;
+    flag = true;
+    }
   }
   return 0;
 }
