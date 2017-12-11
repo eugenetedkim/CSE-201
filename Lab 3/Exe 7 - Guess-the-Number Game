@@ -1,0 +1,33 @@
+// Exercise 7: Guess-the-Number Game (10 points)
+
+// Write a program that implements Guess-the-Number game.
+// The program should enter a loop that starts by printing "What year did Pakistan achieve independence?"
+// After printing this, it reads the user response.
+// (Use cin >> n to read the user response.)
+// If the user enters a value less than 1947, the program prints "too early" and continues the loop.
+// If the user enters a number larger than 1947, the program prints "too late" and continues the loop.
+// If the user enters the number 1947, the program prints "you got it" and then terminates.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int n;
+  bool flag = false;
+  while (flag != true) {
+    cout << "What year did Pakistan achieve independence?"<<endl;
+    cin >> n;
+    if (n < 1947) {
+    cout << "too early" << endl;
+    }
+    else if (n > 1947) {
+    cout << "too late" << endl;
+	  }
+    else {
+			cout << "you got it" << endl;
+			flag = true;
+	  }
+  }
+  return 0;
+}
