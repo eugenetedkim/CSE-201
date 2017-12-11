@@ -1,0 +1,24 @@
+/*
+Exercise 6: Pass by value (10 points)
+Implement a function that returns an integer that is one greater than the integer passed into it.
+The function has the following signature.
+int addOne(int k);
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int addOne(int k) {
+    int greaterThanOne;
+    greaterThanOne = k + 1;
+    return greaterThanOne;
+}
+
+int main() {
+    cout << "Please enter an integer: ";
+    int k;
+    cin >> k;
+    int greaterThanOne = addOne(k);
+    cout << "One greater than your integer is: " << greaterThanOne << endl;
+}
