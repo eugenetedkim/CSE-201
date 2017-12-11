@@ -1,0 +1,19 @@
+// Lab 3
+
+// Exercise 4: 'While' Loops (10 points)
+
+// Write a C++ program that prints every integer between 330 and 550, inclusive. Use a while loop.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int x = 330;
+	while (x >= 330 && x <= 550) {
+		cout << x << endl;
+		++x;
+  }
+  return 0;
+}
+
