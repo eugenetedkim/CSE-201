@@ -1,0 +1,29 @@
+// Lab 5
+// Exercise 2: Max value in an array (10 points)
+
+// Provide an implementation of the maximum function whose declaration is shown below.
+// The first argument of the function is an array of int
+// and the second argument is the number of ints that are in the array.
+// The function returns the largest int that is in the array.
+
+// int maximum(int a[], int numberOfElements)
+
+#include <iostream>
+
+using namespace std;
+
+int maximum(int a[], int numberOfElements) {
+	int largest = a[0];
+	for (int i = 0; i < numberOfElements; ++i) {
+        if(a[i] > largest) {
+            largest = a[i];
+        }
+	}
+	return largest;
+}
+
+int main(int argc, char * args[]) {
+	int a[] = {27, 2, 69, 9, 8, 420, 10};
+	int largestValue = maximum(a, 7);
+	cout << largestValue << endl;
+}
