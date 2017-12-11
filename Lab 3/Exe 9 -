@@ -1,0 +1,39 @@
+// Exercise 9: Detecting prime numbers (10 points)
+
+// Write a console program that asks the user to enter an integer greater than 1. 
+// The program determines if the number entered is prime and writes a message to standard output stream stating whether the number is prime or not. 
+// For example, if the user enters 42, the program displays "42 is not prime." 
+// If the user enters 47, the program displays "47 is prime."
+
+// Be sure to test your program's output with 8 different numbers. 
+// It is important to test your program's output after compiling it to make sure that your code is correct. 
+// Document these test cases at the bottom of your code, showing the input and output of each. 
+// Example:
+
+// n      result
+// 1      prime
+// 2      not prime
+// 3      prime
+
+// and so on
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  cout << "Please enter an integer greater than 1: ";
+  int n;
+  cin >> n;
+  if (n <= 1) {
+    cout << "Please enter an integer greater than 1: ";
+  }
+  for (int i = 2; i <= (n - 2); i++) {
+    if ((n%i) == 0) {
+      cout << n << " is not prime.";
+    }
+    else {
+      cout << n << " is prime.";
+    }
+  }
+}
