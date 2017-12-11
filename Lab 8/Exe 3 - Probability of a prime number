@@ -1,0 +1,84 @@
+// Lab 8
+// Exercise 3: Probability of a prime number (10 points)
+
+// int countPrimes(const vector<Number> & v);
+// 
+// Write a function named countPrimes that takes a vector of Number class instances
+// and returns the number of prime numbers in the the vector.
+// Use the Number class you defined in the previous problem.
+// The declaration of countPrimes is given above.
+
+// Note: For your code to compile, the isPrime function of your Number class should be declared const.
+
+// Use the following code for your main function.
+
+// #include <iostream>
+// #include <vector>
+// #include <cmath>
+// #include <cstdlib>
+// #include <ctime>
+
+// int main() {
+//         srand(time(0));
+//         const int N = 100;
+//         vector<Number> v;
+//         for (int i = 0; i < N; ++i) {
+//                 int r;
+//                 do { r = rand(); } while (r < 2); // Make sure r is not 0 or 1.
+//                 v.push_back(Number(r));
+//         }
+//         cout    << "The percentage of primes in [2, " << RAND_MAX << "] is "
+//                 << countPrimes(v) / (double) N 
+//                 << endl;
+// }
+
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+class Number {
+    int n;
+public:
+        Number(int);
+        bool isPrime();
+};
+
+bool Number::isPrime() {
+    bool prime = true;
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            prime = false;
+        }
+    } 
+    return prime;
+}
+
+Number::Number(int n) {
+    this-> n = n;
+}
+
+int countPrimes(vector<Number> & v) {
+    int primeCount = 0;
+    for (int i = 0; i < v.size(); i++) {
+        if(v[i].isPrime()) {
+            primeCount++;
+        }
+    }
+    return primeCount;
+}
+
+int main() {
+        srand(time(0));
+        const int N = 100;
+        vector<Number> v;
+        for (int i = 0; i < N; ++i) {
+                int r;
+                do { r = rand() % 100; } while (r < 2);
+                v.push_back(Number(r));
+        }
+        cout << "The percentage of primes in [2, " << RAND_MAX << "] is " << countPrimes(v) / (double) N << endl;
+}
