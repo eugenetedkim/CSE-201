@@ -1,0 +1,26 @@
+// Experience Working with C++ (10 points)
+
+// This section explains how to write, compile and run a simple C++ console program in your remote Cloud9 workspace. 
+// The program is called a hello program because when it runs, it prints hello.
+
+// Create a file named hello.cpp in your Cloud9 workspace and fill it with the following contents.
+
+// #include <iostream>
+
+// using namespace std;
+
+// int main(int argc, char * args[]) {
+//   cout << "hello\n";
+//   return 0;
+// }
+
+// From a Cloud9 terminal window, run the following command to compile hello.cpp.
+
+// c++ hello.cpp
+
+// The above command generates an executable file named a.out.
+// To run this file, issue the following from the command line.
+
+// ./a.out
+// Modify the source code in hello.cpp so that it displays a greeting to you, such as Hello, David. 
+// Test that your changes produce an executable file that runs as expected.
