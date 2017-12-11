@@ -1,0 +1,17 @@
+// Learn the Command Line Interface (20 points)
+
+// For this assignment, you should complete the interactive Codecademy command line tutorial.
+// You will need to create a free account with Codecademy for this purpose.
+// The tutorial covers topics that will not appear on quizzes or exams; 
+// see the description above and the list of example quiz questions to understand what type of problems you are expected 
+// to solve from memory in this course.
+
+// command completion
+
+// One helpful feature of the terminal window is called command completion. 
+// If you press tab in the command line, the system will try to complete what you are typing by looking for a matching filename.
+
+// command history
+
+// Another helpful feature is called command history. This feature allows you to access a record of commands that you previously entered. 
+// Use the up and down arrow keys to scroll through the command history. Press enter at any previously entered command to run it again.
