@@ -1,0 +1,43 @@
+// Lab 6
+// Exercise 3: Summing across 2D arrays (10 points)
+
+// Implement a function that computes the total sum
+// of all values in a 2-dimensional array with 100 rows and 100 columns.
+// The function takes a two-dimensional array of int
+// and returns the total sum of all its values.
+// A declaration of the function is shown below.
+
+// int total(int a[100][100])
+
+
+#include <iostream>
+#include <cstdlib>
+
+using namespace std;
+
+int total(int a[100][100])
+{
+    int sum = 0;
+    for(int i = 0; i < 100; i++)
+    {
+        for(int j = 0; j < 100; j++)
+        {
+            sum = sum + a[i][j];
+        }
+    }
+    return sum;
+}
+
+int main()
+{
+    int a[100][100];
+    srand(time(0));
+    for(int i = 0; i < 100; i++)        // This For loop generates random array values
+    {
+        for(int j = 0; j < 100; j++)
+        {
+            a[i][j] = (rand() % 100);
+        }
+    }
+    cout << "The sum of all values in this 2-dimensional array is: " << total(a) << endl;       // Prints total values in array
+}
