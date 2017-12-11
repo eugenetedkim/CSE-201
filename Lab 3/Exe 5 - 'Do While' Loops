@@ -1,0 +1,19 @@
+// Lab 3
+
+// Exercise 5: 'Do While' Loops (10 points)
+
+// Provide a solution to the previous exercise that uses a do-while loop.
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int x = 330;
+  do {
+  cout << x << endl;
+  while (x >= 330 && x <= 550) {
+  ++x;
+  }
+  return 0;
+}
