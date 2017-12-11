@@ -1,0 +1,32 @@
+/*
+Exercise 4: Random integer function (10 points)
+Implement a function named randomInteger that takes as arguments a lower bound a and an upper bound b of an interval [a, b].
+The function computes and returns a random integer that falls inside this interval.
+Write a program that prompts the user for a lower bound and an upper bound.
+After the user inputs these values, the program should call your randomInteger function to get a random integer between the lower and upper bounds.
+The program displays this value to the user and then terminates.
+*/
+
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+
+using namespace std;
+
+int randomInteger(int a, int b) {
+    srand(time(0));
+    int range = b - a;
+    int random = a + rand() % range;
+    return random;
+}
+
+int main() {
+    cout << "Please enter a lower bound: ";
+    int a;
+    cin >> a;
+    cout << "Please enter an upper bound: ";
+    int b;
+    cin >> b;
+    int random = randomInteger(a,b);
+    cout << random << endl;
+}
