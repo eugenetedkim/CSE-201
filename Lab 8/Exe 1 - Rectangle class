@@ -1,0 +1,67 @@
+// Exercise 1: Rectangle class (20 points)
+
+// Implement a rectangle class in accordance with the following UML class diagram.
+
+// +---------------------------------------------------+
+// |                                                   |
+// |                    Rectangle                      |
+// |                                                   |
+// +---------------------------------------------------+
+// |                                                   |
+// | - width : double                                  |
+// | - height : double                                 |
+// |                                                   |
+// +---------------------------------------------------+
+// |                                                   |
+// | + Rectangle(width : double, height : double)      |
+// | + area() : double                                 |
+// | + isSquare() : bool                               |
+// |                                                   |
+// +---------------------------------------------------+
+// The rectangle class should be useable in the following program. Include this program in your submitted work.
+
+// int main() {
+//     Rectangle foo(3, 4);  // Create a rectangle with width of 3 and height of 4.
+//     Rectangle bar(5, 5);  // Create a rectangle with width of 5 and height of 5.
+//     cout << "The area of rectangle foo is: " << foo.area() << endl;
+//     cout << "The area of rectangle bar is: " << bar.area() << endl;
+//     assert(foo.isSquare() == false);
+//     assert(bar.isSquare() == true);
+//     return 0;
+// }
+
+
+#include <iostream>
+#include <assert.h>
+
+using namespace std;
+
+class Rectangle {
+	double width, height;
+public:
+	Rectangle(double, double);
+	double area();
+	bool isSquare();
+};
+
+Rectangle::Rectangle(double a, double b) {
+	width = a;
+	height = b;
+}
+
+double Rectangle::area() {
+    return width*height;
+}
+
+bool Rectangle::isSquare() {
+    return height == width;
+}
+
+int main() {
+	Rectangle foo(3,4);
+	Rectangle bar(5,5);
+	cout << "The area of rectangle foo is: " << foo.area() << endl;
+	cout << "The area of rectangle bar is: " << bar.area() << endl;
+	assert(foo.isSquare() == false);
+	assert(bar.isSquare() == true);
+}
