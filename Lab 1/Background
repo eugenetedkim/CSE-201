@@ -1,0 +1,9 @@
+// Background
+
+// When keyboards and monitors were first used in the early days of computers, 
+// all interaction with the computer was done by typing in characters and reading text displayed on the screen. 
+// There were no mice and no graphics other than characters were displayed in the screen. 
+// You can still interact with computers in this way; it is done using a program called a console or a terminal window. 
+// It turns out that this old style interface is very useful and frequently used to this day by programmers and system administrators. 
+// This is especially true for Linux systems, which are the predominate operating system for distributed computing resources on the Internet. 
+// For this reason, in this course we will learn how to use the command line interface.
