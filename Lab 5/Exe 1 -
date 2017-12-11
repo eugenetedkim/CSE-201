@@ -1,0 +1,36 @@
+// Lab 5
+// Exercise 1: Debugging logic errors (10 points)
+
+// The function minValue given below is supposed to return the smallest value that appears in an array;
+// however, there is a logic error in the code. Fix it.
+
+// int minValue(int a[], int len) {
+//     int smallest = 0;
+//     for (int i = 0; i < len; ++i) {
+//         if (a[i] < smallest) smallest = a[i];
+//     }
+//     return smallest;
+// }
+
+// Hint: the function fails for some arrays;
+// try to come up with an array that causes the function to fail (returns a value that is not the minimum).
+
+#include <iostream>
+
+using namespace std;
+
+int minValue(int a[], int len) {
+	int smallest = a[0];
+	for (int i = 0; i < len; ++i) {
+		if (a[i] < smallest) {
+			smallest = a[i];
+		}
+	}
+	return smallest;
+}
+
+int main() {
+	int a[] = {32, 45, 69, 420, 9, 8, 10};
+	int least = minValue(a, 7);
+	cout << least << endl;
+}
