@@ -1,0 +1,32 @@
+/*
+Exercise 5: Lucky function (10 points)
+Implement a function that determines if an integer is lucky.
+The function returns true if the number passed into it is divisible by 7 and not by 13; otherwise it returns false.
+A declaration of the function is shown below.
+
+bool isLucky(int n)
+*/
+
+#include <iostream>
+
+using namespace std;
+
+bool isLucky(int n) {
+    if(n % 7 == 0 && n % 13 != 0) {
+        return true;
+        }
+        return false;
+}
+
+int main() {
+    cout << "Enter an integer: ";
+    int n;
+    cin >> n;
+   
+    if (isLucky(n)) {
+        cout << "true" << endl;
+    }
+    else {
+         cout << "false" << endl;
+    }
+}
