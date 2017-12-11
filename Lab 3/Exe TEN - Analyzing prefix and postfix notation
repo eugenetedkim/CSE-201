@@ -15,10 +15,10 @@
 using namespace std;
 
 int main() {
-  int k = 3;
-  cout << k-- << endl;
-  cout << 4 * --k << endl;
-  cout << 3 * k-- << endl;
-  cout << 7 - ++k << endl;
-  return 0;
+    int k = 3;
+    cout << k-- << endl;
+    cout << 4 * --k << endl;
+    cout << 3 * k-- << endl;
+    cout << 7 - ++k << endl;
+    return 0;
 }
