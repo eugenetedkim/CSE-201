@@ -1,0 +1,74 @@
+// Exercise 2: Number class (20 points)
+
+// Implement a number class to represent integers in accordance with the following UML class diagram.
+
+// +---------------------------------------------------+
+// |                                                   |
+// |                      Number                       |
+// |                                                   |
+// +---------------------------------------------------+
+// |                                                   |
+// | - n : int                                         |
+// |                                                   |
+// +---------------------------------------------------+
+// |                                                   |
+// | + Number(n : int)                                 |
+// | + setValue(n : int)                               |
+// | + isPrime() : bool                                |
+// | + isLucky() : bool                                |
+// |                                                   |
+// +---------------------------------------------------+
+// The number class represents integers.
+// The integer value it represents is passed into the constructor and stored in member variable n.
+// The setValue function takes an integer argument, which it copies into it's private member variable n.
+// The isPrime function returns true if member variable n is prime and false if not prime.
+// The isLucky function returns true if the member variable n is divisible by 7.
+
+// In the main function of your program, provide test code for the isPrime and isLucky functions.
+// Use assert statements for this purpose. Make sure that your test code executes every line of code in the 2 functions.
+
+#include <iostream>
+#include <cassert>
+
+using namespace std;
+
+class Number {
+    int n;
+public:
+    Number(int);
+    void setValue(int n);
+    bool isPrime();
+    bool isLucky();
+};
+
+Number::Number(int n) {
+    this-> n = n;
+}
+
+void Number::setValue(int n) {
+    this-> n = n;
+}
+
+bool Number::isPrime() {
+    bool prime = true;
+    for (int i = 2; i < n; i++) {
+        if (n % i == 0) {
+            prime = false;
+        }
+    }
+    return prime;
+}
+
+bool Number::isLucky() {
+    if (n % 7 != 0) {
+        return false;
+    }
+    return true;
+}
+
+int main() {
+    Number foo(7), bar(14);
+    assert(foo.isPrime() == true && foo.isLucky() == true);
+    assert(foo.isPrime() == true && bar.isLucky() == true);
+    cout << "Since there was no error, both integers are prime and divisible by 7." << endl;
+}
