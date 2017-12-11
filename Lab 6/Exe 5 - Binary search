@@ -1,0 +1,54 @@
+// Exercise 5: Binary search (10 points)
+
+// int binarySearch(int a[], int size, int k);
+// Implement a function that uses binary search to find a given value k in an array of integers a whose elements are in increasing order.
+// If the value is found, the function returns the index of the value in the array; otherwise it returns -1.
+// For example, for a = (-2, 4, 5, 6, 8) and k = 1, the function returns -1. For k = 5 it returns 2.
+// A declaration of the function is given above.
+// Write your own implementation of binary search; do not use the search function available in the C++ standard library.
+
+// Write test code that thoroughly tests your function.
+
+#include <iostream>
+
+using namespace std;
+                               //8  //12   // [0][1][2][3] [4] [5] [6] [7]
+int binarySearch(int a[], int SIZE, int k) // {1, 5, 8, 9, 12, 17, 20, 32}
+{
+    bool found = false;                 
+    int low = 0;                        
+    int high = SIZE - 1;                // high = 7
+    int i;                
+    while (low <= high && !found)       //  4 <= 4 && TRUE
+    {
+        i = (low + high) / 2;         // pos = 4 + 4 / 2 = 4
+        if (a[i] == k)                // a[4] == 12
+        {
+            found = true;
+        }
+        else if (a[i] < k)            // 17 < 12
+        {
+            low = i + 1;              // low = 3 + 1 = 4
+        }
+        else
+        {
+            high = i - 1;             // high = 4
+        }
+    }
+    if (found)
+    {
+        cout << a[i] << " is found at position " << i << ".";
+    }
+    else
+    {
+        cout << "-1";
+    }
+}
+
+int main()
+{
+    const int SIZE = 8;
+    int a[SIZE] = {1, 5, 8, 9, 12, 17, 20, 32};
+    int k = 12;
+    binarySearch(a, SIZE, k);
+}
